@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>registerationform</title>
+</head>
+<h2><center>REGISTRATION FORM</center></h2>
+<body>
+<style>
+input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 3px;
+}
+
+input[type=text],input[type=tel],input[type=email],
+input[type=textarea],input[type=radio],input[type=checkbox] {
+margin: 10px;
+
+}
+
+</style>
+<form>
+<fieldset>
+<legend>User Information</legend>
+
+<label for="name">Name:</label>
+<select id="mr" name="mr" required>
+<option value="male">Mr.</option>
+<option value="female">Ms.</option></select>
+<input type="text" name="name" required>
+<br><br>
+
+<label for="phone">Phone:</label>
+<input type="tel" name="phone" required>
+
+<label  for="email">Email:</label>
+<input type="email" name="email" required>
+</fieldset>
+<br><br>
+
+<label for="address">Address:</label>
+<textarea rows="3" cols="20" name="ads" required>
+</textarea>
+<br><br>
+
+<label>Gender:</label>
+<input type="radio" name="gender" id="male" value="male">Male
+<input type="radio" name="gender" id="female" value="female">Female
+<input type="radio" name="gender" id="other" value="other">Other
+<br><br>
+
+<label for="language">Language Known:</label>
+<input type="checkbox" id="en" name="english" value="english">English
+<input type="checkbox" id="mal" name="malayalam" value="malayalam">Malayalam
+<input type="checkbox" id="hin" name="hindi" value="hindi">Hindi
+<br><br>
+
+<label for="course">Course:</label>
+<select name="couse" id="course">
+        <option value="">Course</option>
+        <option value="bca">BCA</option>
+        <option value="bvoc">BVOC</option>
+        <option value="bsc">BSC</option> <br>
+</select>
+<br><br>
+<input type="submit" name="submit" id="submit" value="Register">
+<input type="submit" name="reset" id="reset" value="Reset">
+</form>
+</body>
+</html>
