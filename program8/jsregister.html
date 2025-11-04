@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+</head>
+<body>
+<style>
+body 
+{
+background-color:#8FBC8F
+}
+input[type=submit], input[type=reset] 
+{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 3px;
+}
+
+input[type=text],input[type=tel],input[type=email],
+input[type=textarea],input[type=radio],input[type=checkbox] {
+margin: 10px;
+}
+</style>
+
+<h2>Registration Form</h2>
+<form name="regform" onsubmit="return formValidate()">
+<fieldset>
+<legend>User Information</legend>
+<label for="name">Name:</label>
+<select id="mr" name="mr" required>
+<option value="male">Mr.</option>
+<option value="female">Ms.</option>
+</select>
+<input type="text" id="name" name="name" size="50" required>
+<br><br>
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" name="phone" required>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<label for="psw">Password:</label>
+<input type="password" id="psw" name="psw" required>
+</fieldset>
+<br><br>
+<input type="submit" name="submit" id="submit" value="Register">
+<input type="reset" name="reset" id="reset" value="Reset">
+</form>
+<script>
+function formValidate() {
+var name = document.getElementById("name").value.trim();
+var phone = document.getElementById("phone").value.trim();
+var email = document.getElementById("email").value.trim();
+var password = document.getElementById("psw").value;
+var nameval = /^[a-zA-Z\s]+$/;
+var phoneval = /^\d{10}$/;
+var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!nameval.test(name)) {
+alert("Name must contain only letters and spaces (A–Z, a–z).");
+return false;
+}
+if (!phoneval.test(phone)) {
+alert("Phone number must contain exactly 10 digits.");
+return false;
+}
+if (!emailPattern.test(email)) {
+alert("Please enter a valid email address.");
+return false;
+}
+if (password.length < 6) {
+alert("Password must be at least 6 characters long.");
+return false;
+}
+alert("Form submitted successfully!");
+return true;
+}
+</script>
+</body>
+</html>
+
+
