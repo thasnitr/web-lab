@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Mouse</title>
+<style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;\
+}
+.rect-frame {
+    width: 300px;
+   height: 330px;
+    padding: 10px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.rect-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+</style>
+</head>
+<body>
+<div class="rect-frame">
+    <img id="mainImage" src="img.jpg" draggable="true">
+</div>
+<script>
+    let img = document.getElementById("mainImage");
+    let img1 = "img.jpg";
+    let img2 = "img1.jpg";
+    let img3 = "img2.jpg";
+    
+    img.addEventListener("mouseenter", function () {
+        img.src = img2;
+    });
+    img.addEventListener("mouseleave", function () {
+        img.src = img3;
+    });
+</script>
+</body>
+</html>
+
